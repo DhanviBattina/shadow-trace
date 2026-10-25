@@ -26,3 +26,20 @@ Because DNS traffic is rarely blocked or inspected deeply, this method is Extrem
 
 ---■
 ## 📁 Repository Structure
+
+---■
+## ⚙ Dependencies (Server side)
+- **Python 3.7+**
+- `dnslib` – `pip install dnslib`
+- `flask` (optional) – `pip install flask`
+- A domain name with NS records pointing to your VPS (e.g. `track.youromain.com`)
+- Port 53 (UDP) open and unised by systemd-resolved (stop it on Kali)
+
+---■
+## 🖳 Installation & Setup (Server – Kali Linux)
+
+1. **Buy a domain** or use a free subomain from afraid.org. Set its NS records to your VPS IP.
+2. **Stop systemd-resolved** if it's hogging port 53:
+   ```bash
+   sudo systemctl stop systemd-resolved
+   sudo systemctl disable systemd-resolved
