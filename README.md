@@ -1,4 +1,3 @@
-# shadow-trace
 # 🔥 Shadow Trace – Burner Device Tracker
 
 **Shadow Trace** turns any lost or stolen laptop/phone into a remote spy – silently **captures GPS location, takes photos**, and **exfiltrates data over DNS** (undetectable by most firewalls). Designed for **ethical tracking** of your own devices, penetration tester asset recuperation, or educational research.
@@ -27,7 +26,6 @@ Because DNS traffic is rarely blocked or inspected deeply, this method is Extrem
 ---■
 ## 📁 Repository Structure
 
----■
 ## ⚙ Dependencies (Server side)
 - **Python 3.7+**
 - `dnslib` – `pip install dnslib`
