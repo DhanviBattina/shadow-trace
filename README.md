@@ -52,8 +52,9 @@ pip3 install dnslib flask
 ```bash
 cd server
 `sudo python3 dnslistener.py`
-(Leave it running in the background or use `tmux`.)
 ```
+(Leave it running in the background or use `tmux`.)
+
 
  ## (OPTIONAL) RUN THE DQASHBOARD 
  ```bash
